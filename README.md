@@ -46,3 +46,7 @@ PhoenixPanelX is a Linux hardware monitoring gadget with CPU/GPU load, actual av
 **Tested only on Zorin OS 18.1, kernel 7.0.0-38-generic, GNOME/X11, Core 2 Quad Q9650, GTX 960 and DDR2 RAM on x86_64.** Other distributions, AMD/Intel GPUs and Wayland have not been verified. Run the monitor as an ordinary user; root/su is not required. The optional fixed-duration motherboard Beep authorization add-on grants only a specific command after administrator authentication; that permission survives reboot and is revocable. The development PC previously had blanket passwordless sudo, which is neither required nor recommended.
 
 **Application source remains private. Experimental binary preview only.**
+
+## 2026-10-29 監視ロジック修正（rc7）
+
+CPU周波数取得失敗による監視更新停止、表示モード変更時の配布EXE再起動、センサー欠損時の警告クールダウン解除、および異常GPU計測値の検証を修正しました。Linux版39件のテスト成功、修正版ELFの隔離GUI起動は8秒間継続しました。すべてのGPU・マザーボードで動くことを保証するものではなく、Beepの別PC検証も未完了です。詳細は [2026-10-29テスト報告](./TEST_REPORT_20261029.md) を参照してください。公開リポジトリは説明文書と配布バイナリのみで、Python/Cソースは公開しません。
